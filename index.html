@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Music Platform Data</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h1>Week 4 Music Platform Data</h1>
+    <label>Type
+        <select id="typeFilter">
+            <option value="All">All</option>
+            <option value="Freemium">Freemium</option>
+            <option value="Subscription">Subscription</option>
+        </select>
+    </label>
+    <label>Order
+        <select id="sortOrder">
+            <option value="original">Original</option>
+            <option value="ascending">Streams low to high</option>
+            <option value="descending">Streams high to low</option>
+        </select>
+    </label>
+
+    <p id="rowCount" aria-live="polite"></p>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Platform</th>
+                <th>Payout per Stream (USD)</th>
+                <th>Monthly Users (millions)</th>
+                <th>Type</th>
+                <th>Streams for US Monthly Minimum Wage</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <canvas id="revenueChart"></canvas>
+    <p>Source: <a href="https://github.com/birchallchris/musicrevenue">Course example repository</a>.</p>
+    <p>Classroom estimates only. Not verified current rates or actual artist income.</p>
+</body>
+</html>
